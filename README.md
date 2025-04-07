@@ -14,8 +14,8 @@
 
 #Root権限で実行
 
-for JAVA in `find / -name java -type f | grep -v alternatives`; do echo "$JAVA"; $JAVA -version 2>&1 | head -3; done​
+`for JAVA in "find / -name java -type f | grep -v alternatives"; do echo "$JAVA"; $JAVA -version 2>&1 | head -3; done​`
 
 ##コマンドが異となる場合
 
-sh -c 'for JAVA in `find / -name java -type f | grep -v alternatives`; do echo "$JAVA"; $JAVA -version 2>&1 | head -3; done'​
+`sh -c 'for JAVA in "find / -name java -type f | grep -v alternatives"; do echo "$JAVA"; $JAVA -version 2>&1 | head -3; done'​`
