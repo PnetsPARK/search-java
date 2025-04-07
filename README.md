@@ -12,7 +12,7 @@ where.exe /r D:\ java.exe | Where-Object {$_ -notlike "*javapath*"} | ForEach-Ob
 
 ※RemainigScrptsをバインドできません。エラの場合
 
-where.exe /r C:\ java.exe | Where-Object { $_ -notlike "*javaPath*" } | ForEach-Object { $regex = [regex]::new("java(\d+\.\d+\.\d+)") ; if (($match=$regex.Match($_)).Success){$match.Groups[1].Value} else { $_ } }
+where.exe /r C:\ java.exe | Where-Object { $_ -notlike "*javaPath*" } | ForEach-Object { $regex = [regex]::new("java(\d+\.\d+\.\d+)") ; if (($match=$regex.Match($_ )).Success){$match.Groups[1].Value} else { $_ } }
 
 ✅Linux
 
