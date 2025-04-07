@@ -4,7 +4,7 @@
 
 #Powershell・管理者権限で実行
 
-where.exe /r C:\ java.exe | Where-Object {$_ -notlike "*javapath*"} | ForEach-Object -Process {$_; & "$_" -version }​
+where.exe /r C:\ java.exe | Where-Object {$_ -notlike "*javapath*"} | ForEach-Object -Process {$_; & "$_" -version }
 
 ##他のドライバーもある場合（D、E、F…）
 
